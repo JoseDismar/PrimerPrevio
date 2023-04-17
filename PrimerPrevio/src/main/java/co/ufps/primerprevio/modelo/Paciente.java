@@ -4,12 +4,18 @@ import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
+@Table(name = "paciente")
 public class Paciente {
 	@Id
 	private int id;
@@ -18,10 +24,10 @@ public class Paciente {
 	private String apellido;
 	private String email;
 	private char genero;
-	private Date fechaNacimiento;
+	private String fechaNacimiento;
 	private int peso;
 	private int estatura;
-	public Paciente(String documento, String nombre, String apellido, String email, char genero, Date fechaNacimiento,
+	public Paciente(String documento, String nombre, String apellido, String email, char genero, String fechaNacimiento,
 			int peso, int estatura) {
 		super();
 		this.documento = documento;
