@@ -8,7 +8,7 @@ import co.ufps.primerprevio.util.JpaUtil;
 
 public class PacienteDao {
 	
-    public void insertEntity() {
+    public void insertPaciente() {
         EntityManager entityManager = JpaUtil.getEntityManagerFactory().createEntityManager();
         EntityTransaction entityTransaction = entityManager.getTransaction();
         entityTransaction.begin();
